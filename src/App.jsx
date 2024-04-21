@@ -57,39 +57,39 @@ function App() {
 
   return (
     <>
-      <div className="text-neutral-200 flex justify-center items-center flex-col gap-8">
-        <h1 className="text-5xl font-bold capitalize mt-8">
+      <div className="px-6 lg:px-32 text-neutral-200 w-full text-center flex justify-center items-center flex-col gap-3 lg:gap-8">
+        <h1 className="text-2xl lg:text-5xl font-bold capitalize mt-8">
           Random password generator
         </h1>
-        <p className="text-xl">
+        <p className="text-[11px] lg:text-xl">
         Create a strong, secure password to protect your online account.
         </p>
       </div>
 
-      <div className="mt-32 px-32 flex justify-between items-center gap-40 text-neutral-200">
-        <div className="w-[30%]">
+      <div className="mt-20 mb-6 lg:mt-32 px-6 md:px-28 lg:px-32 flex flex-col lg:flex-row justify-between items-center gap-20 lg:gap-40 text-neutral-200">
+        <div className="w-[250px] lg:w-[40%]">
           <img className="w-full" src={safe} alt="" />
         </div>
 
-        <div className="w-[70%] flex flex-col gap-y-12">
-          <div className="w-full flex gap-4 relative justify-between items-center">
+        <div className="w-full lg:w-[70%] flex flex-col gap-y-6 lg:gap-y-12">
+          <div className="w-full flex gap-2 lg:gap-4 relative justify-between items-center">
             <input
               type="text"
               name="password"
               readOnly
-              className="relative w-full rounded-2xl px-5 py-3 text-sm bg-neutral-200 text-black outline-none border-gray-900"
+              className="relative w-full rounded-2xl px-3 lg:px-5 py-2 lg:py-3 text-xs lg:text-sm bg-neutral-200 text-black outline-none border-gray-900"
               value={password}
               ref={passRef}
             />
-            <FcRefresh onClick={passwordGenerator} className="absolute right-0 -translate-x-[120px] z-10 text-2xl cursor-pointer" />
+            <FcRefresh onClick={passwordGenerator} className="absolute right-0 -translate-x-[80px] md:-translate-x-[90px] lg:-translate-x-[120px] z-50 bg-neutral-200 px-1 text-2xl lg:text-3xl cursor-pointer" />
 
-            <button className="bg-blue-600 text-neutral-200 font-bold uppercase text-sm rounded-full w-28 py-3 shadow-2xl shadow-blue-600" onClick={handleOnCopy}>
+            <button className="bg-blue-600 text-neutral-200 font-bold uppercase text-xs lg:text-sm rounded-full w-20 lg:w-28 px-3 lg:px-5 py-2 lg:py-3 shadow-2xl shadow-blue-600" onClick={handleOnCopy}>
               {cText}
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4">
-            <div className="flex w-full justify-between items-center gap-5">
+          <div className="flex flex-col text-sm lg:text-base items-center justify-center gap-4">
+            <div className="flex w-full justify-between items-center gap-2 lg:gap-5">
             <label className="w-full">
                 Password Length : <span className="font-bold">{length}</span>
               </label>
@@ -104,23 +104,23 @@ function App() {
               />
             </div>
 
-            <div className="flex justify-between items-center w-full gap-4">
+            <div className="flex flex-wrap justify-between items-center w-full gap-2 lg:gap-4">
             <label>Charecter Used :</label>
 
-            <div className="flex space-x-8 tracking-wider">
-              <div className="flex gap-3">
+            <div className="flex space-x-2 lg:space-x-8 tracking-wider">
+              <div className="flex gap-1 lg:gap-3">
                 <input defaultChecked={uppercaseAllowed} onChange={() => setUppercaseAllowed((prev) => !prev)} type="checkbox" />
                 <label>ABC</label>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-1 lg:gap-3">
                 <input defaultChecked={lowercaseAllowed} onChange={() => {setLowercaseAllowed((prev) => !prev)}} type="checkbox" />
                 <label>abc</label>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-1 lg:gap-3">
                 <input type="checkbox" defaultChecked={numberAllowed} onChange={() => setNumberAllowed((prev) => !prev)} />
                 <label>123</label>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-1 lg:gap-3">
                 <input defaultChecked={charecterAllowed} onChange={() => setCharecterAllowed((prev) => !prev)} type="checkbox" />
                 <label>#$@</label>
               </div>
