@@ -66,7 +66,7 @@ function App() {
         </p>
       </div>
 
-      <div className="mt-20 mb-6 lg:mt-32 px-3 sm:px-6 md:px-28 lg:px-32 flex flex-col lg:flex-row justify-between items-center gap-20 lg:gap-32 xl:gap-40 text-neutral-200">
+      <div className="mt-16 mb-3 lg:mt-32 px-3 sm:px-6 md:px-28 lg:px-32 flex flex-col lg:flex-row justify-between items-center gap-20 lg:gap-32 xl:gap-40 text-neutral-200">
         <div className="w-[250px] lg:w-[40%]">
           <img className="w-full" src={safe} alt="" />
         </div>
@@ -77,13 +77,13 @@ function App() {
               type="text"
               name="password"
               readOnly
-              className="relative w-full rounded-2xl px-3 lg:px-5 py-2 lg:py-3 text-xs lg:text-sm bg-neutral-200 text-black outline-none border-gray-900"
+              className="relative w-full rounded-2xl px-3 lg:px-5 py-2 lg:py-3 text-[10px] sm:text-xs lg:text-sm bg-neutral-200 text-black outline-none border-gray-900"
               value={password}
               ref={passRef}
             />
             <FcRefresh onClick={passwordGenerator} className="absolute right-0 -translate-x-[80px] md:-translate-x-[90px] lg:-translate-x-[120px] z-50 bg-neutral-200 px-1 text-2xl lg:text-3xl cursor-pointer" />
 
-            <button className="bg-blue-600 text-neutral-200 font-bold uppercase text-xs lg:text-sm rounded-full max-w-16 w-full lg:max-w-none lg:w-28 px-3 lg:px-5 py-2 lg:py-3 shadow-2xl shadow-blue-600" onClick={handleOnCopy}>
+            <button className="bg-blue-600 text-neutral-200 font-bold uppercase text-[10px] sm:text-xs lg:text-sm rounded-full max-w-16 w-full lg:max-w-none lg:w-28 px-2 sm:px-3 lg:px-5 py-2 lg:py-3 shadow-2xl shadow-blue-600" onClick={handleOnCopy}>
               {cText}
             </button>
           </div>
